@@ -1,0 +1,28 @@
+#include <ros/ros.h>
+#include <geometry_msgs/Twist.h>
+#include <math.h>
+
+float x1, y1, theta1, thet2;
+float side1, side2, hypot
+
+x1=0 #initialize starting point
+y1=0
+theta1=0
+
+# insert code pulling x2,y2 from either ROS node or .txt file 
+
+side1=x2-x1 #calculate each side of the right triangle
+side2=y2-y1
+hypot=sqrt(pow(side1)+pow(side2)) #find hypotenuse of triangle
+theta2=tan(side2/side1) #find angle of hypotenuse
+
+# publish twist command to determine speed at which bot moves to x2, y2 at an angle of theta2
+# use Lidar to detect when target angle is hit 
+# when done stop moving
+
+x1=x2 #updating starting position
+y1=y2
+theta1=theta2
+
+
+
